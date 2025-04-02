@@ -1,0 +1,38 @@
+<button id="fermer" type="button" (click)="fermer()" class="btn btn-danger">
+  X
+</button>
+
+<form [formGroup]="formemploye" (ngSubmit)="actionemploye()">
+  <div class="form-row">
+    <h4 class="text-primary">Ajouter un employé</h4>
+
+    <div class="col">
+      <input
+        formControlName="nom"
+        type="text"
+        class="form-control"
+        placeholder="Nom"
+      />
+    </div>
+
+    <div class="col">
+      <input type="file" (change)="fileSelected($event)" class="form-control" />
+    </div>
+
+    <div class="row">
+      <select formControlName="departement" class="form-control">
+        <option value="" disabled selected>Sélectionner un département</option>
+        <option
+          *ngFor="let departement of departements"
+          [value]="departement.id"
+        >
+          {{ departement.nom }}
+        </option>
+      </select>
+    </div>
+
+    <div class="sub">
+      <input type="submit" class="btn btn-primary" />
+    </div>
+  </div>
+</form>

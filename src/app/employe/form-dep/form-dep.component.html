@@ -1,0 +1,19 @@
+<button id="fermer" type="button" (click)="fermer()" class="btn btn-danger">
+  X
+</button>
+<form [formGroup]="formdepart" (ngSubmit)="addDepartement()">
+  <div class="form-row">
+    <h4 class="text-primary">Ajouter un departement</h4>
+    <div class="col">
+      <input
+        formControlName="nom"
+        type="text"
+        class="form-control"
+        placeholder="Nom departement"
+      />
+    </div>
+    <div class="sub">
+      <input type="submit" class="btn btn-primary" />
+    </div>
+  </div>
+</form>

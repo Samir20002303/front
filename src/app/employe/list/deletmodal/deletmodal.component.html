@@ -1,0 +1,16 @@
+<div class="deletModal">
+    <div class="modal-header">
+      <button type="button" (click)="fermer()" class="btn btn-danger">X</button>
+      <h5 class="modal-title">Supression d'employe </h5>
+
+    </div>
+    <div class="modalbody">
+      <p>voulez-vous vraiment supprimer cet employe ?</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" (click)="ActiveModal.close('oui')" class="btn btn-danger">Oui</button>
+      <button type="button" (click)="fermer()" class="btn btn-secondary">Non</button>
+    </div>
+  </div>
+
+
